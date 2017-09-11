@@ -19,6 +19,15 @@
 
 @implementation TweetViewController
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -94,15 +103,35 @@
 - (void)connectionDidFinishLoading:(nonnull NSURLConnection *)connection {
     
     if (self.requestData) {
+        NSLog(@"Has returned data requested...");
         NSError *jsonError;
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:self.requestData options:NSJSONReadingAllowFragments error:&jsonError];
         
         self.results = dictionary[@"statuses"];
         
     }
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    self.requestData = nil;
+    [self.refreshControl endRefreshing];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    self.connection = nil;
+    self.requestData = nil;
+    [self.refreshControl endRefreshing];
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+    
 }
 
 
