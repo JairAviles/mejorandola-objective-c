@@ -100,6 +100,7 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
     TweetViewController *tweetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tweetView"];
+    tweetViewController.hashTag = [menuItemDictionary objectForKey:@"hashtag"];
     [self.navigationController pushViewController:tweetViewController animated:YES];
     
     

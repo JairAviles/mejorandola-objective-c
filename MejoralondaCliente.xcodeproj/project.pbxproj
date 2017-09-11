@@ -16,6 +16,11 @@
 		583A38A81F657D5500C96CF7 /* MejoralondaClienteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38A71F657D5500C96CF7 /* MejoralondaClienteTests.m */; };
 		583A38B31F657D5500C96CF7 /* MejoralondaClienteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38B21F657D5500C96CF7 /* MejoralondaClienteUITests.m */; };
 		583A38C21F660F3000C96CF7 /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38C11F660F3000C96CF7 /* TweetViewController.m */; };
+		65FA91C41F66BDF500818CE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA91C31F66BDF500818CE1 /* CoreGraphics.framework */; };
+		65FA91C61F66BDFB00818CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA91C51F66BDFB00818CE1 /* UIKit.framework */; };
+		65FA91C81F66BE0300818CE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA91C71F66BE0300818CE1 /* Foundation.framework */; };
+		65FA91CA1F66BE0E00818CE1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA91C91F66BE0E00818CE1 /* Accounts.framework */; };
+		65FA91CC1F66BE1C00818CE1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA91CB1F66BE1C00818CE1 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		583A38B41F657D5500C96CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		583A38C01F660F3000C96CF7 /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
 		583A38C11F660F3000C96CF7 /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
+		65FA91C31F66BDF500818CE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65FA91C51F66BDFB00818CE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65FA91C71F66BE0300818CE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65FA91C91F66BE0E00818CE1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		65FA91CB1F66BE1C00818CE1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FA91CC1F66BE1C00818CE1 /* Social.framework in Frameworks */,
+				65FA91CA1F66BE0E00818CE1 /* Accounts.framework in Frameworks */,
+				65FA91C81F66BE0300818CE1 /* Foundation.framework in Frameworks */,
+				65FA91C61F66BDFB00818CE1 /* UIKit.framework in Frameworks */,
+				65FA91C41F66BDF500818CE1 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,7 @@
 				583A38A61F657D5500C96CF7 /* MejoralondaClienteTests */,
 				583A38B11F657D5500C96CF7 /* MejoralondaClienteUITests */,
 				583A388B1F657D5500C96CF7 /* Products */,
+				65FA91C21F66BDF500818CE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +159,18 @@
 				583A38B41F657D5500C96CF7 /* Info.plist */,
 			);
 			path = MejoralondaClienteUITests;
+			sourceTree = "<group>";
+		};
+		65FA91C21F66BDF500818CE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65FA91CB1F66BE1C00818CE1 /* Social.framework */,
+				65FA91C91F66BE0E00818CE1 /* Accounts.framework */,
+				65FA91C71F66BE0300818CE1 /* Foundation.framework */,
+				65FA91C51F66BDFB00818CE1 /* UIKit.framework */,
+				65FA91C31F66BDF500818CE1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
