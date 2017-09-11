@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TweetViewController.h"
 
 @interface ViewController ()
 
@@ -94,6 +95,14 @@
     }
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
+    TweetViewController *tweetViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tweetView"];
+    [self.navigationController pushViewController:tweetViewController animated:YES];
+    
+    
 }
 
 

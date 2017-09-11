@@ -15,6 +15,7 @@
 		583A389D1F657D5500C96CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583A389B1F657D5500C96CF7 /* LaunchScreen.storyboard */; };
 		583A38A81F657D5500C96CF7 /* MejoralondaClienteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38A71F657D5500C96CF7 /* MejoralondaClienteTests.m */; };
 		583A38B31F657D5500C96CF7 /* MejoralondaClienteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38B21F657D5500C96CF7 /* MejoralondaClienteUITests.m */; };
+		583A38C21F660F3000C96CF7 /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A38C11F660F3000C96CF7 /* TweetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		583A38AE1F657D5500C96CF7 /* MejoralondaClienteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MejoralondaClienteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		583A38B21F657D5500C96CF7 /* MejoralondaClienteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MejoralondaClienteUITests.m; sourceTree = "<group>"; };
 		583A38B41F657D5500C96CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583A38C01F660F3000C96CF7 /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
+		583A38C11F660F3000C96CF7 /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				583A38931F657D5500C96CF7 /* ViewController.h */,
 				583A38941F657D5500C96CF7 /* ViewController.m */,
 				583A38961F657D5500C96CF7 /* Main.storyboard */,
+				583A38C01F660F3000C96CF7 /* TweetViewController.h */,
+				583A38C11F660F3000C96CF7 /* TweetViewController.m */,
 				583A38991F657D5500C96CF7 /* Assets.xcassets */,
 				583A389B1F657D5500C96CF7 /* LaunchScreen.storyboard */,
 				583A389E1F657D5500C96CF7 /* Info.plist */,
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583A38C21F660F3000C96CF7 /* TweetViewController.m in Sources */,
 				583A38951F657D5500C96CF7 /* ViewController.m in Sources */,
 				583A38921F657D5500C96CF7 /* AppDelegate.m in Sources */,
 				583A388F1F657D5500C96CF7 /* main.m in Sources */,
@@ -505,6 +511,7 @@
 				583A38B91F657D5500C96CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		583A38BA1F657D5500C96CF7 /* Build configuration list for PBXNativeTarget "MejoralondaClienteTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +520,7 @@
 				583A38BC1F657D5500C96CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		583A38BD1F657D5500C96CF7 /* Build configuration list for PBXNativeTarget "MejoralondaClienteUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				583A38BF1F657D5500C96CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
