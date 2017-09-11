@@ -71,6 +71,28 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:(@"Cell") forIndexPath:indexPath];
+    UIImageView *imageView = (UIImageView *) [cell viewWithTag:10];
+    
+    if([self.menuItems count] > 0) {
+        NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
+        NSString *imageUrlString = [cellDictionary objectForKey:@"image_url"];
+        NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
+        NSURLRequest * imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
+        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *) response;
+            
+            if (urlResponse.statusCode == 200) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    imageView.image = [UIImage imageWithData:data];
+                });
+            } else {
+                NSLog(@"Not able to retrieve the information");
+            }
+            
+        }];
+        [task resume];
+    }
+    
     return cell;
 }
 
